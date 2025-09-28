@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Sentinels Call Ministries</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    /* Banner */
+    .banner {
+      background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    .banner h1 {
+      font-size: 40px;
+      background: rgba(0,0,0,0.4);
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+
+    /* Section */
+    .contact-section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background: #f2f2f2;
+      transition: 0.3s;
+    }
+    .contact-item:hover {
+      background: #e2e2e2;
+    }
+    .contact-item i {
+      font-size: 22px;
+      color: #0056b3;
+    }
+    .contact-item a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+    .contact-item a:hover {
+      color: #0056b3;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+    button {
+      padding: 14px;
+      background: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #003f80;
+    }
+    .success-message {
+      display: none;
+      color: green;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .error-message {
+      display: none;
+      color: red;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* Google Map */
+    .map-container {
+      margin-top: 30px;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 350px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 40px 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    footer h3 {
+      color: #fff;
+    }
+    .footer-links {
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: #fff;
+    }
+    .social-icons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-icons a {
+      color: #ccc;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Contact Sentinels Call Ministries</h1>
+  </div>
+
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:0799220506">0799 220 506</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/254799220506" target="_blank">Chat on WhatsApp</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:sentinelscallministries@gmail.com">sentinelscallministries@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-tiktok"></i>
+        <a href="https://www.tiktok.com/@YourTikTokUsername" target="_blank">Follow us on TikTok</a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Full Name" required>
+        <input type="email" id="email" placeholder="Your Email Address" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p class="success-message" id="successMessage">✅ Thank you! Your message has been sent.</p>
+        <p class="error-message" id="errorMessage">❌ Oops! Something went wrong.</p>
+      </form>
+    </div>
+
+    <!-- Google Map (Nairobi) -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.197769242242!2d36.8219468!3d-1.2920659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d6c8b7d8b7%3A0x7df504f0c21e5d8f!2sNairobi!5e0!3m2!1sen!2ske!4v1695915200000"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Sentinels Call Ministries - Nairobi</h3>
+    <p>Sunday Service: 10:00 AM | Midweek Fellowship: Wednesday 6:00 PM</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="events.html">Events</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://wa.me/254799220506" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:sentinelscallministries@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.tiktok.com/@YourTikTokUsername" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p style="margin-top: 15px;">&copy; 2025 Sentinels Call Ministries. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+    const errorMessage = document.getElementById("errorMessage");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      })
+      .then(() => {
+        successMessage.style.display = "block";
+        errorMessage.style.display = "none";
+        form.reset();
+      }, (err) => {
+        errorMessage.style.display = "block";
+        successMessage.style.display = "none";
+        console.error("EmailJS error:", err);
+      });
+    });
+    emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {...});
+  </script>
+</body>
+</html>

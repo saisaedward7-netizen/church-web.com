@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - Sentinels Call Ministries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1a2a6c;
+      --gold: #c89b3a;
+      --light-bg: #f8f9fa;
+      --text-dark: #333;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light-bg);
+      margin: 0;
+      color: var(--text-dark);
+    }
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .event-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+    }
+    .event-card:hover {
+      transform: scale(1.02);
+    }
+    .event-date {
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    .register-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+    }
+    .register-btn:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    footer {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Upcoming Events</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Join Us for Our Special Events</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <div class="event-date">Sept 28, 2025</div>
+        <h3>Youth Worship Night</h3>
+        <p>An evening of praise, music, and fellowship for the youth. 6:00 PM at the main sanctuary.</p>
+        <a href="contact.html" class="register-btn">Register</a>
+      </div>
+<div class="event-banner">
+  <h2>Upcoming Event</h2>
+  <p>Join us this Saturday for Worship & Fellowship – 10:00 AM</p>
+  <a href="#register" class="btn">Learn More</a>
+</div>
+
+<style>
+.event-banner {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('event1.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+.event-banner h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.event-banner p {
+  font-size: 1.2em;
+}
+.event-banner .btn {
+  background: #ffcc00;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.event-banner .btn:hover {
+  background: #ffaa00;
+}
+</style>
+
+      <div class="event-card">
+        <div class="event-date">Oct 5, 2025</div>
+        <h3>Community Outreach</h3>
+        <p>Join us as we bless the community with food distribution and prayer sessions. 9:00 AM.</p>
+        <a href="contact.html" class="register-btn">Register</a>
+      </div>
+<div class="event-banner guest">
+  <h2>Special Guest Speaker</h2>
+  <p>Rev. John Doe – Saturday, 4:00 PM</p>
+  <a href="#register" class="btn">Reserve Seat</a>
+</div>
+<div class="event-banner youth">
+  <h2>Youth Night</h2>
+  <p>Games • Music • Fellowship – Friday 6:30 PM</p>
+  <a href="#signup" class="btn">Join Now</a>
+</div>
+
+<style>
+.event-banner.youth {
+  background: url('youth.jpg') center/cover no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(255,0,100,0.6);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+</style>
+
+<style>
+.event-banner.guest {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+}
+</style>
+
+      <div class="event-card">
+        <div class="event-date">Oct 19, 2025</div>
+        <h3>Family Picnic</h3>
+        <p>Bring your whole family for a fun day of games, sharing meals, and spiritual bonding. 10:00 AM.</p>
+        <a href="contact.html" class="register-btn">Register</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Sentinels Call Ministries | Nairobi, Kenya</p>
+  </footer>
+<script>
+(function () {
+  const carousel = document.getElementById('eventCarousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+  const dotsContainer = carousel.querySelector('.carousel-dots');
+  const status = carousel.querySelector('.carousel-status');
+
+  const autoplayAttr = carousel.dataset.autoplay;
+  const intervalAttr = parseInt(carousel.dataset.interval || '5000', 10);
+
+  const AUTOPLAY = autoplayAttr === 'false' ? false : true;
+  const INTERVAL = Number.isFinite(intervalAttr) ? intervalAttr : 5000;
+
+  let currentIndex = 0;
+  let timer = null;
+  let startX = 0;
+  let isDragging = false;
+  const swipeThreshold = 40; // px
+
+  // create dots
+  slides.forEach((slide, i) => {
+    slide.setAttribute('data-slide-index', i);
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.setAttribute('data-index', i);
+    dot.setAttribute('role', 'tab');
+    if (i === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsContainer.children);
+
+  function updateUI() {
+    const offset = -currentIndex * 100;
+    track.style.transform = `translateX(${offset}%)`;
+    slides.forEach((s, i) => s.setAttribute('aria-hidden', i === currentIndex ? 'false' : 'true'));
+    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+    // update screen-reader status
+    status.textContent = `Slide ${currentIndex + 1} of ${slides.length}`;
+  }
+
+  function goTo(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    currentIndex = index;
+    updateUI();
+    resetAutoplay();
+  }
+
+  function next() { goTo(currentIndex + 1); }
+  function prev() { goTo(currentIndex - 1); }
+
+  function startAutoplay() {
+    if (!AUTOPLAY) return;
+    stopAutoplay();
+    timer = setInterval(next, INTERVAL);
+  }
+  function stopAutoplay() {
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+  function resetAutoplay() { if (AUTOPLAY) { stopAutoplay(); startAutoplay(); } }
+
+  // Event listeners
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  dotsContainer.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const idx = parseInt(btn.dataset.index, 10);
+    if (!Number.isNaN(idx)) goTo(idx);
+  });
+
+  // pause on hover/focus
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  carousel.addEventListener('focusin', stopAutoplay);
+  carousel.addEventListener('focusout', startAutoplay);
+
+  // keyboard nav
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // touch support (swipe)
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    stopAutoplay();
+  }, {passive: true});
+
+  track.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const dx = e.touches[0].clientX - startX;
+    // we could implement a follow-drag effect here; keeping simple for performance
+  }, {passive: true});
+
+  track.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    const endX = (e.changedTouches && e.changedTouches[0].clientX) || startX;
+    const dx = endX - startX;
+    if (Math.abs(dx) > swipeThreshold) {
+      if (dx < 0) next(); else prev();
+    }
+    isDragging = false;
+    startAutoplay();
+  });
+
+  // make sure the carousel is sized correctly after images load (if you use background images it's fine)
+  window.addEventListener('resize', updateUI);
+
+  // init
+  updateUI();
+  startAutoplay();
+
+  // expose simple API for manual control if needed
+  carousel.carousel = {
+    next, prev, goTo, startAutoplay, stopAutoplay
+  };
+})();
+</script>
+</body>
+</html>

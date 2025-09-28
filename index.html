@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentinel Call Ministries</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+    /* Header */
+    header {
+        background: url('https://via.placeholder.com/1600x500.png?text=Church+Banner') no-repeat center center/cover;
+        height: 400px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
+    header p { font-size: 1.2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); }
+
+    /* Navigation */
+    nav { display: flex; justify-content: center; background: #333; flex-wrap: wrap; }
+    nav a { color: white; padding: 15px 20px; text-decoration: none; transition: 0.3s; }
+    nav a:hover { background: #555; }
+
+    /* Sections */
+    section { padding: 50px 20px; text-align: center; }
+    section h2 { margin-bottom: 20px; font-size: 2rem; }
+
+    /* Ministries Carousel */
+    .carousel-container {
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        touch-action: pan-y;
+    }
+    .carousel-slide img {
+        width: 100%;
+        min-width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        font-size: 2rem;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        z-index: 10;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Events Carousel */
+    .events-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .event-card {
+        flex: 0 0 300px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+    .event-card img { width: 100%; height: 200px; object-fit: cover; }
+    .event-card:hover { transform: scale(1.05); }
+
+    /* Footer */
+    footer { background: #333; color: white; text-align: center; padding: 20px 0; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        header { height: 300px; }
+        header h1 { font-size: 2rem; }
+        header p { font-size: 1rem; }
+        .carousel-slide img { height: 200px; }
+        .event-card { flex: 0 0 250px; }
+    }
+    @media (max-width: 480px) {
+        nav a { padding: 10px 12px; font-size: 0.9rem; }
+        .carousel-slide img { height: 180px; }
+        .event-card { flex: 0 0 200px; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Sentinel Call Ministries</h1>
+    <p>Transforming Lives Through Faith</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#ministries">Ministries</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="#donate">Donate</a>
+</nav>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>Sentinel Call Ministries is committed to spreading the word of God and empowering communities through faith, love, and service.</p>
+</section>
+
+<!-- Ministries Carousel -->
+<section id="ministries">
+    <h2>Our Ministries</h2>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+           <div class="carousel-slide">
+    <img src="images/youth_ministry.jpg" alt="Youth Ministry">
+    <img src="images/women_ministry.jpg" alt="Women Ministry">
+    <img src="images/men_ministry.jpg" alt="Men Ministry">
+    <img src="images/community_outreach.jpg" alt="Community Outreach">
+</div>
+
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+<!-- Events Carousel -->
+<section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="events-carousel">
+        <div class="event-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Sunday+Service" alt="Sunday Service">
+        </div>
+        <div class="event-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Bible+Study" alt="Bible Study">
+        </div>
+        <div class="event-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Community+Outreach" alt="Community Outreach">
+        </div>
+        <div class="event-card">
+            <img src="https://via.placeholder.com/300x200.png?text=Prayer+Meeting" alt="Prayer Meeting">
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@sentinelcallministries.org | Phone: +254 700 000 000</p>
+</section>
+
+<!-- Donate Section -->
+<section id="donate">
+    <h2>Support Us</h2>
+    <p>Your generous donations help us reach more people with our ministry programs.</p>
+    <button onclick="alert('Redirecting to Donate page...')">Donate Now</button>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Sentinel Call Ministries. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript for Ministries Carousel with Swipe -->
+<script>
+    const carouselSlide = document.querySelector('.carousel-slide');
+    const carouselImages = document.querySelectorAll('.carousel-slide img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let counter = 0;
+
+    function updateCarousel() {
+        const size = carouselImages[0].clientWidth;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+
+    nextBtn.addEventListener('click', () => {
+        counter++;
+        if(counter >= carouselImages.length) counter = 0;
+        updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        counter--;
+        if(counter < 0) counter = carouselImages.length - 1;
+        updateCarousel();
+    });
+
+    // Auto-slide
+    setInterval(() => {
+        counter++;
+        if(counter >= carouselImages.length) counter = 0;
+        updateCarousel();
+    }, 5000);
+
+    // Touch swipe
+    let startX = 0;
+    let endX = 0;
+    carouselSlide.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+    carouselSlide.addEventListener('touchmove', e => { endX = e.touches[0].clientX; });
+    carouselSlide.addEventListener('touchend', () => {
+        if(startX - endX > 50){ counter++; if(counter >= carouselImages.length) counter = 0; }
+        if(endX - startX > 50){ counter--; if(counter < 0) counter = carouselImages.length - 1; }
+        updateCarousel();
+    });
+</script>
+
+</body>
+</html>

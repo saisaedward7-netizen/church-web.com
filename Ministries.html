@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Ministries - Sentinels Call Ministries</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Banner */
+    .banner {
+      background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    .banner h1 {
+      font-size: 42px;
+      background: rgba(0,0,0,0.5);
+      padding: 15px 40px;
+      border-radius: 12px;
+    }
+
+    /* Ministries Section */
+    .ministries {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .ministries h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #222;
+    }
+    .ministry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .ministry-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, opacity 0.6s ease;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    .ministry-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .ministry-card:hover {
+      transform: translateY(-6px);
+    }
+    .ministry-card i {
+      font-size: 40px;
+      color: #0056b3;
+      margin-bottom: 15px;
+    }
+    .ministry-card h3 {
+      margin-bottom: 12px;
+      color: #333;
+    }
+    .ministry-card p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 40px 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    footer h3 {
+      color: #fff;
+    }
+    .footer-links {
+      margin: 15px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: #fff;
+    }
+    .social-icons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-icons a {
+      color: #ccc;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Our Ministries</h1>
+  </div>
+
+  <!-- Ministries Section -->
+  <section class="ministries">
+    <h2>Serving God, Serving People</h2>
+    <div class="ministry-grid">
+
+      <div class="ministry-card">
+        <i class="fas fa-church"></i>
+        <h3>Worship Ministry</h3>
+        <p>Leading the congregation into God’s presence through praise and worship, uplifting hearts and spirits.</p>
+      </div>
+
+      <div class="ministry-card">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Outreach Ministry</h3>
+        <p>Sharing the love of Christ in Nairobi and beyond, through evangelism, missions, and community support.</p>
+      </div>
+
+      <div class="ministry-card">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Youth Ministry</h3>
+        <p>Equipping the young generation with biblical values, leadership skills, and fellowship opportunities.</p>
+      </div>
+
+      <div class="ministry-card">
+        <i class="fas fa-book-open"></i>
+        <h3>Teaching Ministry</h3>
+        <p>Grounding believers in the Word of God through Bible studies, discipleship, and sound doctrine.</p>
+      </div>
+
+      <div class="ministry-card">
+        <i class="fas fa-praying-hands"></i>
+        <h3>Prayer Ministry</h3>
+        <p>Interceding for the church, community, and the world, standing in the gap through prayer and fasting.</p>
+      </div>
+
+      <div class="ministry-card">
+        <i class="fas fa-heart"></i>
+        <h3>Children’s Ministry</h3>
+        <p>Raising a God-fearing generation by teaching children biblical truths in fun and engaging ways.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Sentinels Call Ministries - Nairobi</h3>
+    <p>Sunday Service: 10:00 AM | Midweek Fellowship: Wednesday 6:00 PM</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="events.html">Events</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://wa.me/254799220506" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:sentinelscallministries@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.tiktok.com/@YourTikTokUsername" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <p style="margin-top: 15px;">&copy; 2025 Sentinels Call Ministries. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Scroll Animation -->
+  <script>
+    const cards = document.querySelectorAll('.ministry-card');
+
+    const revealCards = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if (cardTop < triggerBottom) {
+          card.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealCards);
+    window.addEventListener('load', revealCards);
+  </script>
+
+</body>
+</html>
